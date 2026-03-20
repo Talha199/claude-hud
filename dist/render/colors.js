@@ -17,11 +17,28 @@ const ANSI_BY_NAME = {
     brightBlue: BRIGHT_BLUE,
     brightMagenta: BRIGHT_MAGENTA,
 };
-function resolveAnsi(name, fallback) {
-    if (!name) {
+/** Convert a hex color string (#rrggbb) to a truecolor ANSI escape sequence. */
+function hexToAnsi(hex) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `\x1b[38;2;${r};${g};${b}m`;
+}
+/**
+ * Resolve a color value to an ANSI escape sequence.
+ * Accepts named presets, 256-color indices (0-255), or hex strings (#rrggbb).
+ */
+function resolveAnsi(value, fallback) {
+    if (value === undefined || value === null) {
         return fallback;
     }
-    return ANSI_BY_NAME[name] ?? fallback;
+    if (typeof value === 'number') {
+        return `\x1b[38;5;${value}m`;
+    }
+    if (typeof value === 'string' && value.startsWith('#') && value.length === 7) {
+        return hexToAnsi(value);
+    }
+    return ANSI_BY_NAME[value] ?? fallback;
 }
 function colorize(text, color) {
     return `${color}${text}${RESET}`;

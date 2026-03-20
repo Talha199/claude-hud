@@ -81,6 +81,16 @@ function validateColorName(value) {
         || value === 'brightBlue'
         || value === 'brightMagenta';
 }
+const HEX_COLOR_PATTERN = /^#[0-9a-fA-F]{6}$/;
+function validateColorValue(value) {
+    if (validateColorName(value))
+        return true;
+    if (typeof value === 'number' && Number.isInteger(value) && value >= 0 && value <= 255)
+        return true;
+    if (typeof value === 'string' && HEX_COLOR_PATTERN.test(value))
+        return true;
+    return false;
+}
 function validateElementOrder(value) {
     if (!Array.isArray(value) || value.length === 0) {
         return [...DEFAULT_ELEMENT_ORDER];
@@ -222,19 +232,19 @@ export function mergeConfig(userConfig) {
         failureCacheTtlSeconds: validatePositiveInt(migrated.usage?.failureCacheTtlSeconds, DEFAULT_CONFIG.usage.failureCacheTtlSeconds),
     };
     const colors = {
-        context: validateColorName(migrated.colors?.context)
+        context: validateColorValue(migrated.colors?.context)
             ? migrated.colors.context
             : DEFAULT_CONFIG.colors.context,
-        usage: validateColorName(migrated.colors?.usage)
+        usage: validateColorValue(migrated.colors?.usage)
             ? migrated.colors.usage
             : DEFAULT_CONFIG.colors.usage,
-        warning: validateColorName(migrated.colors?.warning)
+        warning: validateColorValue(migrated.colors?.warning)
             ? migrated.colors.warning
             : DEFAULT_CONFIG.colors.warning,
-        usageWarning: validateColorName(migrated.colors?.usageWarning)
+        usageWarning: validateColorValue(migrated.colors?.usageWarning)
             ? migrated.colors.usageWarning
             : DEFAULT_CONFIG.colors.usageWarning,
-        critical: validateColorName(migrated.colors?.critical)
+        critical: validateColorValue(migrated.colors?.critical)
             ? migrated.colors.critical
             : DEFAULT_CONFIG.colors.critical,
     };
