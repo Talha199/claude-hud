@@ -5,6 +5,8 @@ A Claude Code plugin that shows what's happening — context usage, active tools
 [![License](https://img.shields.io/github/license/jarrodwatts/claude-hud?v=2)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/jarrodwatts/claude-hud)](https://github.com/jarrodwatts/claude-hud/stargazers)
 
+[🇩🇪 Deutsch](docs/de/README.de.md) | [🇹🇷 Türkçe](docs/tr/README.tr.md)
+
 ![Claude HUD in action](claude-hud-preview-5-2.png)
 
 ## Install
