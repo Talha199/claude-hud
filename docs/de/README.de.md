@@ -258,7 +258,7 @@ npm ci && npm run build
 npm test
 ```
 
-Siehe [CONTRIBUTING.md](CONTRIBUTING.md) für Richtlinien.
+Siehe [CONTRIBUTING.de.md](/docs/de/CONTRIBUTING.de.md) für Richtlinien.
 
 ---
 
