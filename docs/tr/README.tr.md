@@ -150,10 +150,10 @@ Yönlendirmeli akış düzen ve görüntüleme ayarlarını yönetir. Özel renk
 | `usage.cacheTtlSeconds` | number | 60 | Başarılı kullanım API yanıtının önbellekte tutulma süresi (saniye) |
 | `usage.failureCacheTtlSeconds` | number | 15 | Başarısız yanıtın yeniden denenmeden önce önbellekte tutulma süresi (saniye) |
 | `colors.context` | renk adı | `green` | Bağlam çubuğu ve yüzde için temel renk |
-| `colors.usage` | renk adı | `brightBlue` | Kullanım çubukları için temel renk |
-| `colors.warning` | renk adı | `yellow` | Uyarı rengi |
-| `colors.usageWarning` | renk adı | `brightMagenta` | Kullanım uyarı rengi |
-| `colors.critical` | renk adı | `red` | Kritik durum rengi |
+| `colors.usage` | renk adı | `brightBlue` | Kullanım çubukları ve yüzdeler için temel renk |
+| `colors.warning` | renk adı | `yellow` | Bağlam eşikleri ve uyarı metinleri için uyarı rengi |
+| `colors.usageWarning` | renk adı | `brightMagenta` | Eşiğe yakın kullanım çubukları için uyarı rengi |
+| `colors.critical` | renk adı | `red` | Limite ulaşılan durumlar için kritik renk |
 
 Desteklenen renk adları: `red`, `green`, `yellow`, `magenta`, `cyan`, `brightBlue`, `brightMagenta`.
 
