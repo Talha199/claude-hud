@@ -5,7 +5,7 @@ Claude Code eklentisi — bağlam kullanımı, aktif araçlar, çalışan ajanla
 [![Lisans](https://img.shields.io/github/license/jarrodwatts/claude-hud?v=2)](LICENSE)
 [![Yıldızlar](https://img.shields.io/github/stars/jarrodwatts/claude-hud)](https://github.com/jarrodwatts/claude-hud/stargazers)
 
-![Claude HUD çalışırken](claude-hud-preview-5-2.png)
+![Claude HUD çalışırken](/claude-hud-preview-5-2.png)
 
 ## Kurulum
 
