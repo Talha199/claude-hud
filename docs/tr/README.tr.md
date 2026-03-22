@@ -266,7 +266,7 @@ npm ci && npm run build
 npm test
 ```
 
-Yönergeler için [CONTRIBUTING.md](docs/tr/CONTRIBUTING.tr.md) dosyasına bakın.
+Yönergeler için [CONTRIBUTING..tr.md](/docs/tr/CONTRIBUTING.tr.md) dosyasına bakın.
 
 ---
 
