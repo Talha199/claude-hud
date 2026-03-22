@@ -34,6 +34,7 @@ mkdir -p ~/.cache/tmp && TMPDIR=~/.cache/tmp claude
 Ardından aşağıdaki kurulum komutunu o oturumda çalıştırın. Bu bir [Claude Code platform kısıtlamasıdır](https://github.com/anthropics/claude-code/issues/14799).
 
 </details>
+
 ```
 /plugin install claude-hud
 ```
